@@ -5,70 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What do I have in my fridge?</title>
    <style>
-       /* Базове скидання відступів браузера */
-       * {
-           box-sizing: border-box;
-           margin: 0;
-           padding: 0;
-       }
+       body{
 
-       body {
-           font-family: Arial, Helvetica, sans-serif;
-           background-color: #f4f6f8; /* Легкий сірий фон всієї сторінки */
-           display: flex;
-           justify-content: center; /* Центруємо весь білий блок по центру екрана */
-           padding: 50px;
        }
-
-       /* Білий блок-холодильник */
-       .fridge-container {
-           background-color: white;
-           padding: 40px;
-           border-radius: 10px;
+       .fridge-container{
            text-align: center;
-           max-width: 700px;
-           box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Легка тінь для краси */
+           max-width: 800px;
+           margin: 0 auto;
+
+       }
+       h2{
+           text-align: center;
        }
 
-       h2 {
-           margin-bottom: 30px;
-       }
+    .products-grid{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    .product-card{
+        background-color: ghostwhite;
+        width: 150px;
+        height: 200px;
+        border: 1px solid darkgrey;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
 
-       /* --- МАГІЯ FLEXBOX (ГЕНЕРАЛ) --- */
-       .products-grid {
-           display: flex;
-           flex-wrap: wrap; /* Наказуємо переносити картки на новий рядок, якщо не влазять */
-           justify-content: center; /* Центруємо картки по горизонталі */
-           gap: 15px; /* Ідеальні проміжки між усіма картками (замінює костилі з margin) */
-           margin-bottom: 30px;
-       }
 
-       /* --- КАРОЧКИ (СОЛДАТИ) --- */
-       .product-card {
-           width: 110px; /* Задаємо фіксовану ширину, щоб всі були однакові */
-           padding: 20px 10px;
-           border: 2px solid #eaeaea; /* Сіра рамочка */
-           border-radius: 15px; /* Закруглені кути */
-           background-color: white;
-       }
 
-       /* Замінюємо картинки на гігантський текст (емодзі) */
-       .icon {
-           font-size: 50px;
-           margin-bottom: 10px;
-       }
+    }
+    .icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 80px;
 
-       .product-card p {
-           font-size: 14px;
-           font-weight: bold;
-           color: #333;
-       }
 
-       .footer-text {
-           font-size: 12px;
-           color: #888;
-           font-weight: bold;
-       }
+    }
+    .footer-text{
+        text-align: center;
+
+    }
    </style>
 </head>
 <body>
@@ -92,11 +74,24 @@
             <div class="icon">🧀</div>
             <p>Cheese</p>
         </div>
+        <div class="product-card">
+            <div class="icon">🧀</div>
+            <p>Cheese</p>
+        </div>
+        <div class="product-card">
+            <div class="icon">🧀</div>
+            <p>Cheese</p>
 
+        </div>
+        <div class="product-card">
+            <div class="icon">🧀</div>
+            <p>Cheese</p>
     </div>
 
-    <p class="footer-text">... that's all ...</p>
-</div>
 
+</div>
+</div>
+<hr>
+    <p class="footer-text">... that's all ...</p>
 </body>
 </html>
